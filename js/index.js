@@ -419,27 +419,27 @@ function Geo() {
   });
 };
 
-//Geo();
+Geo();
 
 
 //Random Quote
 
-$(document).ready(function() {
+$(document).ready(function () {
   $.ajaxSetup({ cache: false });
 });
 
 $(function () {
-$.getJSON("https://cors-anywhere.herokuapp.com/https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1",function (data) {
-  var post = data.shift();
-  var colourStart = "#0A5CD4";
-  $('.quote-title').html('<em>- ' + post.title + '</em>');
-  $('.quote-title').css('color', colourStart);
-  $('.quote-content').html(post.content);
-  $('.quote-content').css('color', colourStart);
-  $('.quoteMark').css('color', colourStart);
-  $('.tweetButton').css('color', colourStart);
+  $.getJSON("https://cors-anywhere.herokuapp.com/https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function (data) {
+    var post = data.shift();
+    var colourStart = "#0A5CD4";
+    $('.quote-title').html('<em>- ' + post.title + '</em>');
+    $('.quote-title').css('color', colourStart);
+    $('.quote-content').html(post.content);
+    $('.quote-content').css('color', colourStart);
+    $('.quoteMark').css('color', colourStart);
+    $('.tweetButton').css('color', colourStart);
 
-} )
+  })
 
 });
 
@@ -451,17 +451,17 @@ $(".quoter").on("click", function () {
     colour += letters[Math.floor(Math.random() * 16)];
     colour2 += letters[Math.floor(Math.random() * 16)]
   }
-$.getJSON("https://cors-anywhere.herokuapp.com/https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function (data) {
-  var post = data.shift(); // The data is an array of posts. Grab the first one.
-  console.log(post);
-  $('.quoter').css('background-color', colour2);
-  $('.quote-title').html('- ' + post.title);
-  $('.quote-title').css('color', colour2);
-  $('.quote-content').html(post.content);
-  $('.quote-content p').css('color', colour2);
-  $('.quoteMark').css('color', colour2);
-  $('.tweetButton').css('color', colour2);
-})
+  $.getJSON("https://cors-anywhere.herokuapp.com/https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function (data) {
+    var post = data.shift(); // The data is an array of posts. Grab the first one.
+    console.log(post);
+    $('.quoter').css('background-color', colour2);
+    $('.quote-title').html('- ' + post.title);
+    $('.quote-title').css('color', colour2);
+    $('.quote-content').html(post.content);
+    $('.quote-content p').css('color', colour2);
+    $('.quoteMark').css('color', colour2);
+    $('.tweetButton').css('color', colour2);
+  })
 
 });
 
