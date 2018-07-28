@@ -110,8 +110,7 @@ span.logo {
     min-height: 100vh;
     overflow: hidden;
     text-align: center;
-    font-size: 1.5em;
-    font-family: 'Shadows Into Light', cursive;
+    font-size: 1em;
 }
 
 .panel {
@@ -135,7 +134,14 @@ span.logo {
 }
 
 .panel p:nth-child(2) {
-    font-size: 1.4em;
+    font-size: 1.7em;
+}
+
+@media screen and (max-width: 800px) {
+    .panel p:nth-child(2) {
+      font-size: 1.1em;
+
+    }
 }
 
 /* Panel children*/
@@ -171,19 +177,19 @@ span.logo {
 }
 
 .panel2 {
-    background-image: url("file://D:/dckym/Dev/Studying/Wes-Bos-Courses/Javascript30/05-Flex_Panels/02.jpg");
+    background-image: url("../images/01.jpg");
 }
 
 .panel3 {
-    background-image: url("file://D:/dckym/Dev/Studying/Wes-Bos-Courses/Javascript30/05-Flex_Panels/03.jpg");
+    background-image: url("../images/01.jpg");
 }
 
 .panel4 {
-    background-image: url("file://D:/dckym/Dev/Studying/Wes-Bos-Courses/Javascript30/05-Flex_Panels/04.jpg");
+    background-image: url("../images/01.jpg");
 }
 
 .panel5 {
-    background-image: url("file://D:/dckym/Dev/Studying/Wes-Bos-Courses/Javascript30/05-Flex_Panels/05.jpg");
+    background-image: url("../images/01.jpg");
 }
 
 .open {
