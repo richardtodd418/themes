@@ -373,7 +373,7 @@ a:link {
     padding-top: 20px;
     display: grid;
     grid-template-columns: [c1] 10% [c2] 1fr [c3] 1fr [c4] 10% [c5];
-    grid-template-rows: [r1] 80px [r2] 60px [r3] 60px [r4] 10px [r5] auto [r6] 170px [r7];
+    grid-template-rows: [r1] 80px [r2] 60px [r3] 60px [r4] 1fr [r5] auto [r6] 170px [r7];
     grid-template-areas: "header header header header" "searchinput searchinput searchinput searchinput " "search search search search" ". sep sep ." ". results results ." ". details details ." "footer footer footer footer";
     grid-gap: 5px 5px;
 }

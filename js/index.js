@@ -153,7 +153,6 @@ $('.search').on('click', function (WikipediaSearch) {
       divConstructor += '<div class="result"><div class="resultsTitle' + a + '"></div><div class="resultsExtract' + a + '"></div><div class="resultsImage' + a + '"></div></div>';
     }
     $('.results').html(divConstructor);
-    console.log(divConstructor);
     $('.resultstitle').html('<h3>Results for <em>' + searchitem + '</em></h3>');
     $.getJSON('https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&indexpageids=1&generator=search&utf8=1&exchars=' + extractLength + '&exlimit=' + maxResults + '&exintro=1&exsectionformat=plain&gsrlimit=' + maxResults + '&origin=*&gsrsearch=' + searchitem, function (json) {
       var results = (JSON.stringify(json));
@@ -161,7 +160,6 @@ $('.search').on('click', function (WikipediaSearch) {
       var pagesw = json.query.pages;
       //gets array of values for pages key of json (contains page ids)
       var keysW = json.query.pageids;
-      console.log(keysW);
       var imagelist = "";
       //alert(pagesw[keysW[0]].extract)
       //alert (pagesw[keysVar].title);
@@ -342,7 +340,7 @@ $('.imageOff').click(function () {
   });
 })
 
-// URL shortner service
+// URL shortener service
 
 const urlInput = document.querySelector(".urlInput");
 const url = "https://shorts.glitch.me/new/";
