@@ -268,7 +268,7 @@ a:link {
 
 .portfolioItem {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 45%));
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
     grid-gap: 20px;
     justify-items: center;
     margin-bottom: 10px;
@@ -276,7 +276,7 @@ a:link {
 
 .portfolioLinkMain {
     padding: 3px;
-    max-width: 100%;
+    max-width: 550px;
 }
 
 .wrapperMain {

@@ -423,7 +423,7 @@ function Geo() {
   });
 };
 
-// Geo();
+Geo();
 
 
 //Random Quote
