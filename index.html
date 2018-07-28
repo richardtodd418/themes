@@ -10,7 +10,7 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
   <meta name="viewport" content="width=device-width">
 </head>
 
@@ -31,10 +31,13 @@
             <a href="#container1">About</a>
           </li>
           <li>
-            <a href="#container2">Portfolio</a>
+            <a href="#portfolio">Portfolio</a>
           </li>
           <li>
-            <a href="#container4">Connect</a>
+            <a href="#apis">Interact</a>
+          </li>
+          <li>
+            <a href="#about_you">About you</a>
           </li>
         </ul>
       </div>
@@ -43,7 +46,7 @@
   <!-- Main content -->
   <div class="main">
     <!-- Introduction Section - include flex panels-->
-    <div class="section">
+    <div class="section" id="container1">
 
       <h1 class="maintitle">Richard Todd</h1>
       <h2>About me</h2>
@@ -93,7 +96,7 @@
           <p>Fried</p>
           <p>jQuery</p>
           <p>H</p>
-          </div>
+        </div>
         <div class="panel panel5">
           <p>Never</p>
           <p>More</p>
@@ -106,7 +109,7 @@
 
     <!-- Portfolio section -->
     <!-- Include Recipe Box and Calculator in mobile style section (use media queries) -->
-    <div class="section">
+    <div class="section" id="portfolio">
       <h2>Portfolio</h2>
       <!-- Portfolio Item 1 -->
 
@@ -221,6 +224,32 @@
 
     <div class="section" id="apis">
       <h2>More projects</h2>
+      <div class="portfolio_small">
+        <div class="portfolio_small_single">
+          <p>Javascript Calculator</p>
+          <div class="portfolio_small_wrap">
+            <a href="https://beaniehead.github.io/jscalc/" target="_blank" rel="noopener">
+              <img src="images/CalculatorMobile.png" class="portfolio_small_image" />
+            </a>
+          </div>
+        </div>
+        <div class="portfolio_small_single">
+          <p>React Recipe Box</p>
+          <div class="portfolio_small_wrap">
+            <a href="https://beaniehead.github.io/react-recipe-box/" target="_blank" rel="noopener">
+              <img src="images/ReacrRecipe.png" class="portfolio_small_image" />
+            </a>
+          </div>
+        </div>
+        <div class="portfolio_small_single">
+          <p>Twitch Viewer</p>
+          <div class="portfolio_small_wrap">
+            <a href="https://beaniehead.github.io/twitchViewer/" target="_blank" rel="noopener">
+              <img src="images/TwitchMobile.png" class="portfolio_small_image" />
+            </a>
+          </div>
+        </div>
+      </div>
       <!-- Wikipedia Search -->
       <h2>Wikipedia search</h2>
       <p>Wikipedia search function using the Wikipedia API</p>
@@ -234,8 +263,8 @@
         </div>
         <div class="searchArea">
           <div class="buttonDiv">
-            <button type="submit" class="search wikiButton">Go</button>
-            <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">
+            <button type="submit" class="search wikiButton goButton">Go</button>
+            <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" rel="noopener">
               <i class='fa fa-random random' title="Random Article"></i>
             </a>
           </div>
@@ -258,7 +287,6 @@
               <i class="fa fa-plus"></i>
             </span>
           </div>
-
           <h6 class="settingsTitle">Show images by default</h6>
           <div class="input-group imageControl">
             <span class="input-group-addon imageOff" id="active">Off</span>
@@ -266,7 +294,6 @@
           </div>
           <button type="submit" class="closer wikiButton">Close</button>
         </div>
-
         <div class="settings">
           <i class="fa fa-cog settingsButton"></i>
         </div>
@@ -289,10 +316,9 @@
     </div>
 
     <!-- About you section  - HEADER API and GeoLocation-->
-    <div class="section about_you">
+    <div class="section about_you" id="about_you">
       <hr class="divider" />
       <h2>About you</h2>
-
       <p class="deets"></p>
       <h3>Location</h3>
       <img class="map" src="images/Question_Mark_Map.png" />
@@ -302,18 +328,15 @@
       <h2>Random quote before you go</h2>
       <div class="quoteWrapper">
         <div class="quote">
-          <div id="quoteMark">"&nbsp</div>
-          <div id="quote-content"></div>
-
+          <div class="quoteMark">"&nbsp</div>
+          <div class="quote-content"></div>
         </div>
-        <div id="quote-title"></div>
-
-
+        <div class="quote-title"></div>
         <div class="base quoteButton">
-          <button id="quoter" class="btn btn-secondary">Quoter</button>
+          <button class="btn btn-secondary quoter">Quoter</button>
         </div>
         <div class="base tweet">
-          <a id="tweetButton" href="" target="_blank">
+          <a class="tweetButton" href="" target="_blank"  rel="noopener">
             <i class="fa fa-twitter"></i>
           </a>
         </div>
@@ -321,7 +344,6 @@
     </div>
   </div>
   <!-- Random quote generator -->
-
 
   <!-- Footer -->
   <div class="footer" id="footer">

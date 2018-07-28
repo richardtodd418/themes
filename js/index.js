@@ -89,9 +89,9 @@ const topOfNav = nav.offsetTop;
 var scrollValue = 0;
 //hides nav above window after scrolling past first section, nav reappears on scroll up
 function fixNav() {
-  if (window.scrollY >= topOfNav + 130) {
+  if (window.scrollY >= topOfNav + 80) {
     document.body.classList.add("logo-show");
-  } else if (window.scrollY < topOfNav + 130) {
+  } else if (window.scrollY < topOfNav + 80) {
     document.body.classList.remove("logo-show");
   }
   // set to offsetbottom of H1
@@ -102,7 +102,6 @@ function fixNav() {
   const divi2 = document.querySelector('#divider2');//divider line 2
   if (window.scrollY > scrollValue && window.scrollY >= (topOfNav + divi2.offsetTop - nav.offsetHeight)) { //if scrolling down and at first dividing line
     nav.style.top = `-${nav.offsetHeight - 0}px`;//move nav out of screen by height of nav
-
   }
   scrollValue = window.scrollY; //set scrollValue to current window.scrollY so scroll direction can be ascertained
 }
@@ -420,7 +419,7 @@ function Geo() {
   });
 };
 
-Geo();
+//Geo();
 
 
 //Random Quote
@@ -433,17 +432,18 @@ $(function () {
 $.getJSON("https://cors-anywhere.herokuapp.com/https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1",function (data) {
   var post = data.shift();
   var colourStart = "#0A5CD4";
-  $('#quote-title').html('<em>- ' + post.title + '</em>');
-  $('#quote-title').css('color', colourStart);
-  $('#quote-content').html(post.content);
-  $('#quote-content').css('color', colourStart);
-  $('#quoteMark').css('color', colourStart);
+  $('.quote-title').html('<em>- ' + post.title + '</em>');
+  $('.quote-title').css('color', colourStart);
+  $('.quote-content').html(post.content);
+  $('.quote-content').css('color', colourStart);
+  $('.quoteMark').css('color', colourStart);
+  $('.tweetButton').css('color', colourStart);
 
 } )
 
 });
 
-$("#quoter").on("click", function () {
+$(".quoter").on("click", function () {
   var letters = '0123456789ABCDEF';
   var colour = '#';
   var colour2 = '#';
@@ -454,20 +454,20 @@ $("#quoter").on("click", function () {
 $.getJSON("https://cors-anywhere.herokuapp.com/https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function (data) {
   var post = data.shift(); // The data is an array of posts. Grab the first one.
   console.log(post);
-  $('#quoter').css('background-color', colour2);
-  $('#quote-title').html('- ' + post.title);
-  $('#quote-title').css('color', colour2);
-  $('#quote-content').html(post.content);
-  $('#quote-content p').css('color', colour2);
-  $('#quoteMark').css('color', colour2);
-  $('#tweetButton').css('color', colour2);
+  $('.quoter').css('background-color', colour2);
+  $('.quote-title').html('- ' + post.title);
+  $('.quote-title').css('color', colour2);
+  $('.quote-content').html(post.content);
+  $('.quote-content p').css('color', colour2);
+  $('.quoteMark').css('color', colour2);
+  $('.tweetButton').css('color', colour2);
 })
 
 });
 
-$("a#tweetButton").on("click", function () {
-  var _href = $("a#tweetButton").attr("href");
-  var quote = $("#quote-content").text();
-  var quotee = $("#quote-title").text();
-  $('a#tweetButton').attr('href', 'https://twitter.com/intent/tweet?text=' + quote + quotee);
+$("a.tweetButton").on("click", function () {
+  var _href = $("a.tweetButton").attr("href");
+  var quote = $(".quote-content").text();
+  var quotee = $(".quote-title").text();
+  $('a.tweetButton').attr('href', 'https://twitter.com/intent/tweet?text=' + quote + quotee);
 });
