@@ -345,7 +345,7 @@ $('.imageOff').click(function () {
 const urlInput = document.querySelector(".urlInput");
 const url = "https://shorts.glitch.me/new/";
 const result = document.querySelector(".result");
-const results = document.querySelector(".results");
+const results = document.querySelector(".results2");
 const copy = document.querySelector(".copy");
 const submit = document.querySelector(".submit");
 const clear = document.querySelector(".clear");
@@ -382,7 +382,6 @@ function getURL() {
 
       } else {
         urlInput.value = data.newUrl;
-
         results.classList.toggle("hidden");
         submit.classList.toggle("hidden");
         clear.classList.toggle("hidden");
