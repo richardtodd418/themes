@@ -70,7 +70,7 @@ panels.forEach(panel => panel.addEventListener("click", toggleOpen));
 // Using API to get visitor header information
 function getDeets() {
   $.getJSON("https://cors-anywhere.herokuapp.com/https://header--parser.glitch.me/whoami", data => {
-    $(".deets").append(`Your IP Address is: ${data.ipaddress}<br/>Browser: ${data.browser}<br/>Local time: ${data.time}<br/>Date: ${data.date}`);
+    $(".deets").append(`Your IP Address is: ${data.ipaddress}<br/>Browser: ${data.browser}<br/>Local time: ${data.time.slice(0, data.time.length - 3)}<br/>Date: ${data.date}`);
   });
 }
 
