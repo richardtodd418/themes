@@ -626,8 +626,8 @@ a.readMore {
 
 .closer,
 .closer:hover,
-closer:focus,
-closer:active {
+.closer:focus,
+.closer:active {
     color: #222534;
     background-color: #CBCEDD;
     border: 1px solid #cbcbcb;
@@ -740,20 +740,20 @@ closer:active {
     justify-items: center;
 }
 
-.about_you>p {
+.about_you > p {
     text-align: center;
 }
 
 /* Quoter */
 
-.quoteWrapper>* {
+.quoteWrapper > * {
     padding: 10px;
     flex: 1 100%;
     font-family: 'Raleway', sans-serif !important;
 }
 
 .quoteMark {
-    /* font-family: 'Raleway', sans-serif !important; */
+
     font-size: 2.2em;
 }
 
@@ -761,7 +761,6 @@ closer:active {
     text-align: center;
     display: flex;
     min-height: 200px;
-    /* font-family: 'Raleway', sans-serif !important; */
 }
 
 .quoter {
@@ -793,18 +792,22 @@ closer:active {
 }
 
 @media screen and (min-width: 400px) {
+    
     .base {
         flex: 1 auto;
     }
+    
     .quote-title {
         order: 2;
     }
+    
     .tweet {
         order: 2;
         display: flex;
         align-items: flex-end;
         padding: 0px 10px 0px 20px;
     }
+    
     .quoteButton {
         order: 3;
         display: flex;
@@ -818,23 +821,23 @@ closer:active {
 /* Footer */
 
 .footer {
-    height: 70px;
-    background-color: var(--hf-color);
-    display: grid;
-    align-items: center;
-    justify-items: center;
+  height: 70px;
+  background-color: var(--hf-color);
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
 
 .footer p {
-    color: #f9f9f9;
+  color: #f9f9f9;
 }
 
 .text_link {
-    font-size: 1.1em;
-    padding: 0 5px 0 5px;
-    border-radius: 3px;
-    color: #0092FB !important;
-    border: 1px solid #0092FB;
+  font-size: 1.1em;
+  padding: 0 5px 0 5px;
+  border-radius: 3px;
+  color: #0092FB !important;
+  border: 1px solid #0092FB;
 }
 
 .text_link:hover {
