@@ -334,23 +334,6 @@ submit.addEventListener("click", shorten);
 copy.addEventListener("click", () => document.execCommand("Copy"));
 clear.addEventListener("click", reset);
 
-// Get user's geolocation data and create local map
-function Geo() {
-  const mapSize = 300;
-  navigator.geolocation.watchPosition(data => {
-    const lat = (data.coords.latitude);
-    const long = (data.coords.longitude);
-    const mapURL = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${long}&zoom=14&size=${mapSize}x${mapSize}&maptype=map&key=AIzaSyBjxPMm6RJMnj4SILUqpTfyTSX8Crn_O_M`;
-
-    $(".map").attr("src", mapURL);
-  }, err => {
-    // Show placeholder map with question mark if user doesn't allow location
-    $(".map").attr("src", "images/Question_Mark_Map.png");
-  });
-}
-
-Geo();
-
 // Random Quote
 
 $(document).ready(() => {
